@@ -198,7 +198,7 @@ width: 100%;
   width:100%;
   height:100px;
   position: absolute;
-  top: 1780px;
+  top: 1880px;
   background-color:#1d1d2f;
 }
 
@@ -206,7 +206,7 @@ width: 100%;
   width:100%;
   height:100px;
   position: absolute;
-  top: 3050px;
+  top: 3257px;
   background-color:#1d1d2f;
 }
 
@@ -229,14 +229,14 @@ width: 100%;
   width: 100%;
   height: 100px;
   position: absolute;
-  top: 1685px;
+  top: 1783px;
   overflow: hidden; /* Ensure no overflow */
 }
 .cube-container1 {
   width: 100%;
   height: 100px;
   position: absolute;
-  top: 1879px;
+  top: 1976px;
   overflow: hidden; /* Ensure no overflow */
 }
 
@@ -244,14 +244,15 @@ width: 100%;
   width: 100%;
   height: 100px;
   position: absolute;
-  top: 2955px;
+  top: 3165px;
   overflow: hidden; /* Ensure no overflow */
 }
 .spike-container1 {
   width: 100%;
   height: 100px;
   position: absolute;
-  top: 3148px;
+  top: 3357px;
+  
   overflow: hidden; /* Ensure no overflow */
 }
 
@@ -259,7 +260,7 @@ width: 100%;
   width: 100%;
   height: 240px;
   position: absolute;
-  top: 4064px;
+  top: 4530px;
   overflow: hidden; /* Ensure no overflow */
 }
 
@@ -401,8 +402,8 @@ width: 100%;
 
 .contactText{
   position: absolute;
-    top: 579%;
-    left: 286px;
+  top: 449%;
+  left: 508px;
 }
 
 
@@ -675,6 +676,58 @@ width: 100%;
    
 }
  
+@media (max-width: 1910px) {
+.contactText {
+  position: absolute;
+  top: 605%;
+  left: 286px;
+  display: none;
+}
+}
+@media (max-width: 1496px) {
+  .c-container {
+    width: 100%;
+    height: 240px;
+    position: absolute;
+    top: 4064px;
+    overflow: hidden; /* Ensure no overflow */
+  }
+.cube-container {
+ 
+  top: 1685px;
+  
+}
+.cube-container1 {
+  
+  top: 1879px;
+ 
+}
+.break3{
+  top: 1780px;
+}
+.spike-container {
+  
+  top: 2955px;
+ 
+}
+.spike-container1 {
+ 
+  top: 3148px;
+  
+}
+.break4{
+  top: 3050px;
+}
+.contactText{
+  position: absolute;
+    top: 605%;
+    left: 286px;
+    display:block;
+}
+
+  
+}
+
 @media (max-width: 320px) {
   .selfie {
     width: 320px;
@@ -790,12 +843,13 @@ margin-top: 62%;
     position: absolute;
     top: 4064px;
     overflow: hidden;
-    dislay: hidden;
+    display: hidden;
 }
 .contactText {
   position: absolute;
-  top: 1105%;
+  top: 672%;
   left: 103px;
+  display:block;
 }
 .breakC {
   width: 100%;

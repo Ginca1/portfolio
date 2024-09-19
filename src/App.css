@@ -27,9 +27,9 @@ body {
 .breakC {
   width: 100%;
   height: 100%;
-  border: solid;
+ 
   background-color: #1d1d2f;
-  margin-top: 15%;
+ 
 }
 .about {
   width: 400px;
@@ -107,8 +107,18 @@ width: 100%;
   flex-wrap: wrap;
   align-items: center;
   margin-top: 5%;
+  width: 100%;
 }
 
+.row8{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 8%;
+  width: 100%;
+}
 .row2{
   display: flex;
   flex-direction: row;
@@ -197,16 +207,14 @@ width: 100%;
 .break3{
   width:100%;
   height:100px;
-  position: absolute;
-  top: 1880px;
+  
   background-color:#1d1d2f;
 }
 
 .break4{
   width:100%;
   height:100px;
-  position: absolute;
-  top: 3257px;
+
   background-color:#1d1d2f;
 }
 
@@ -228,30 +236,27 @@ width: 100%;
 .cube-container {
   width: 100%;
   height: 100px;
-  position: absolute;
-  top: 1783px;
+  
   overflow: hidden; /* Ensure no overflow */
 }
 .cube-container1 {
   width: 100%;
   height: 100px;
-  position: absolute;
-  top: 1976px;
+
+ 
   overflow: hidden; /* Ensure no overflow */
 }
 
 .spike-container {
   width: 100%;
   height: 100px;
-  position: absolute;
-  top: 3165px;
+ 
   overflow: hidden; /* Ensure no overflow */
 }
 .spike-container1 {
   width: 100%;
   height: 100px;
-  position: absolute;
-  top: 3357px;
+
   
   overflow: hidden; /* Ensure no overflow */
 }
@@ -259,8 +264,7 @@ width: 100%;
 .c-container {
   width: 100%;
   height: 240px;
-  position: absolute;
-  top: 4530px;
+ 
   overflow: hidden; /* Ensure no overflow */
 }
 
@@ -401,9 +405,8 @@ width: 100%;
 }
 
 .contactText{
-  position: absolute;
-  top: 449%;
-  left: 508px;
+ 
+  
 }
 
 

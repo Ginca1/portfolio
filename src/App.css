@@ -42,11 +42,13 @@ body {
   width: 368px;
 }
 
-.navigation1{
-  height:40px;
-  width:100%;
-
+.navigation1 {
+  height: 40px;
+  width: 100%;
   background-color: #1d1d2f;
+  position: fixed; /* Fix the element at the top */
+  top: 0; /* Align it to the top of the viewport */
+  z-index: 3000; /* Ensure it's on top of other elements */
 }
 .phone{
   width:40px;
@@ -66,9 +68,18 @@ h3{
   
 }
 
-.blop{
-  font-size: 18px;
-  }
+.blop {
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  font-size:18px;
+  padding:7px;
+}
+
+.blop.clicked {
+  transform: scale(1.1);
+  background-color: #f0f0f0; /* Add background change to indicate click */
+  color: #333;
+}
 .educationT{
   color:#070335;
 }
@@ -168,6 +179,14 @@ width: 100%;
   flex-wrap: wrap;
   align-items: center;
 }
+.row-e4{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top:4%;
+}
 .row-l{
   display: flex;
   flex-direction: row;
@@ -191,10 +210,11 @@ width: 100%;
   border-radius:50%;
   background-color:#7562E0;
 }
-.selfie{
-  width: 500px;
-  height: 410px;
-  margin-top:-30px;
+.selfie {
+  width: 100%; /* Use full width of the container */
+  max-width: 500px; /* Maximum width to maintain layout */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: -30px; /* Keep your original margin */
 }
 .break2{
   width:100%;
@@ -269,6 +289,12 @@ width: 100%;
 }
 
 .wave {
+  width: 100%;
+  height: 100%;
+  display: block; /* Remove any inline spacing */
+}
+
+.wave1 {
   width: 100%;
   height: 100%;
   display: block; /* Remove any inline spacing */
@@ -391,12 +417,13 @@ width: 100%;
 
 }
 
-
-.contact{
-  width:900px;
-  height:540px;
- 
+.contact {
+  width: 100%;
+  max-width: 900px;
+  height: AUTO;
+  position: relative; /* Make sure to set a position to contain the absolute positioned element */
 }
+
 .icon{
   width: 27px;
   height: 27px;
@@ -404,9 +431,11 @@ width: 100%;
   margin-left:5px;
 }
 
-.contactText{
- 
-  
+.contactText {
+  position: absolute;
+  top: 0%;
+  left: 103px;
+  display: block;
 }
 
 
@@ -678,22 +707,62 @@ width: 100%;
 
    
 }
- 
-@media (max-width: 1910px) {
-.contactText {
-  position: absolute;
-  top: 605%;
-  left: 286px;
-  display: none;
+
+@media (max-width: 462px) {
+
+.navigation1{
+  display:none;
+} 
+.row25 {
+  margin-top: 86% !important;
 }
+}
+
+@media (max-width: 485px) {
+
+  .row25 {
+    margin-top: 66%;
+  }
+}
+@media (max-width: 800px) {
+
+  .about{
+    margin-top:0px;
+    padding:5px;
+  }
+  .row25 {
+    margin-top: 56%;
+  }
+  }
+
+@media (max-width: 840px) {
+  .contactText {
+   display: none;
+  
+}
+  }
+ 
+@media (max-width: 860px) {
+  .wave-container {
+    DISPLAY: NONE;
+  }
+  .wave1 {
+    DISPLAY: NONE;
+  }
+  .boc-container{
+    display:none;
+  }
+  .break2{
+    display:none;
+  }
+  .box-container {
+  display:none;
+}
+
 }
 @media (max-width: 1496px) {
   .c-container {
-    width: 100%;
-    height: 240px;
-    position: absolute;
-    top: 4064px;
-    overflow: hidden; /* Ensure no overflow */
+     /* Ensure no overflow */
   }
 .cube-container {
  
@@ -721,12 +790,7 @@ width: 100%;
 .break4{
   top: 3050px;
 }
-.contactText{
-  position: absolute;
-    top: 605%;
-    left: 286px;
-    display:block;
-}
+
 
   
 }
@@ -738,17 +802,12 @@ width: 100%;
     margin-top: -30px;
 }
 
-.contact {
-  width: 320px;
-  height: 540px;
- 
-  margin-top: 70px;
-}
+
 
 .about {
   width: 400px;
   height: 370px;
-  
+ 
   margin-top: -0%;
 }
 .box-container {
@@ -816,6 +875,14 @@ width: 100%;
 margin-top: 62%;
    
 }
+.rowH{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
+}
 .spike-container1 {
   width: 100%;
   height: 100px;
@@ -848,12 +915,7 @@ margin-top: 62%;
     overflow: hidden;
     display: hidden;
 }
-.contactText {
-  position: absolute;
-  top: 672%;
-  left: 103px;
-  display:block;
-}
+
 .breakC {
   width: 100%;
   height: 720px;

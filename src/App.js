@@ -1,7 +1,12 @@
 
 import './App.css'; // Make sure you have your styles defined in App.css
-import React, { useState } from 'react';
+
 import emailjs from 'emailjs-com';
+import React, { useState, useRef } from 'react';
+
+
+
+
 const MessageForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -85,6 +90,7 @@ const MessageForm = () => {
       setSuccessMessage('');
     }
   };
+  
 
   return (
     <form onSubmit={handleSubmit}>
@@ -116,27 +122,46 @@ const MessageForm = () => {
 };
 
 function App() {
+
+  const [clickedIndex, setClickedIndex] = useState(null); // State to track the clicked h3 element
+
+  // Create refs for each section
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
+  const educationRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const sectionRefs = [aboutRef, skillsRef, projectsRef, educationRef, contactRef]; // Array of refs
+
+  const handleClick = (index) => {
+    setClickedIndex(index); // Update the state with the clicked element's index
+    sectionRefs[index].current.scrollIntoView({ behavior: 'smooth' }); // Scroll to the respective section
+  };
+
+
   return (
     <div className="main">
         <div style={{width: '100%'}}  className='row'>
          <div className='navigation1'>
          <div className='row'>
          
-          <div className="navigation">
-          <div className='row'>
-    
-        <h3 className='blop'>Home</h3>
-        <h3 className='blop'>About me</h3>
-        <h3 className='blop'>Projects</h3>
-        <h3 className='blop'>Contact</h3>
+         {['About me', 'Skills', 'Projects', 'Education', 'Contact'].map((item, index) => (
+              <h3
+                className={`blop ${clickedIndex === index ? 'clicked' : ''}`} // Add 'clicked' class if it's clicked
+                key={index}
+                onClick={() => handleClick(index)} // Handle click to toggle the class
+              >
+                {item}
+              </h3>
+            ))}
+       
         </div>
         </div>
         </div>
-        </div>
-        </div>
-        <div style={{width: '100%'}} className="row">
+        <div ref={aboutRef}  style={{width: '100%'}} className="row">
           <div className="break">
-          <div style={{height: '100%'}} className='row-e'>
+          <div  style={{height: '100%'}} className='row-e4'>
            <div className='about'>
               <div className='row-l'>
                 <h2>Hello, I'm </h2>
@@ -182,7 +207,7 @@ function App() {
             
           </div>
           <div class="box-container">
-          <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <svg class="wave1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
   <path fill="#1d1d2f" fill-opacity="1" d="M0,160L9.6,165.3C19.2,171,38,181,58,160C76.8,139,96,85,115,80C134.4,75,154,117,173,144C192,171,211,181,230,202.7C249.6,224,269,256,288,245.3C307.2,235,326,181,346,170.7C364.8,160,384,192,403,181.3C422.4,171,442,117,461,90.7C480,64,499,64,518,80C537.6,96,557,128,576,138.7C595.2,149,614,139,634,160C652.8,181,672,235,691,224C710.4,213,730,139,749,117.3C768,96,787,128,806,133.3C825.6,139,845,117,864,122.7C883.2,128,902,160,922,176C940.8,192,960,192,979,181.3C998.4,171,1018,149,1037,138.7C1056,128,1075,128,1094,112C1113.6,96,1133,64,1152,85.3C1171.2,107,1190,181,1210,186.7C1228.8,192,1248,128,1267,117.3C1286.4,107,1306,149,1325,154.7C1344,160,1363,128,1382,133.3C1401.6,139,1421,181,1430,202.7L1440,224L1440,0L1430.4,0C1420.8,0,1402,0,1382,0C1363.2,0,1344,0,1325,0C1305.6,0,1286,0,1267,0C1248,0,1229,0,1210,0C1190.4,0,1171,0,1152,0C1132.8,0,1114,0,1094,0C1075.2,0,1056,0,1037,0C1017.6,0,998,0,979,0C960,0,941,0,922,0C902.4,0,883,0,864,0C844.8,0,826,0,806,0C787.2,0,768,0,749,0C729.6,0,710,0,691,0C672,0,653,0,634,0C614.4,0,595,0,576,0C556.8,0,538,0,518,0C499.2,0,480,0,461,0C441.6,0,422,0,403,0C384,0,365,0,346,0C326.4,0,307,0,288,0C268.8,0,250,0,230,0C211.2,0,192,0,173,0C153.6,0,134,0,115,0C96,0,77,0,58,0C38.4,0,19,0,10,0L0,0Z"></path>
 </svg>
 </div>
@@ -190,8 +215,8 @@ function App() {
         </div>
 
         <div className="rowM">
-        <div className="break1">
-        <div className='row13'>
+        <div  ref={skillsRef} className="break1">
+        <div  className='row25'>
         <h1>My skills</h1>
         </div>
         <div className='row'>
@@ -332,7 +357,7 @@ function App() {
         </div>
         </div>
         </div>
-        <div className='row8'>
+        <div  className='row8'>
         <div class="cube-container">
         <svg className='wave' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
   <path fill="#1d1d2f" fill-opacity="1" d="M0,128L0,96L36.9,96L36.9,96L73.8,96L73.8,256L110.8,256L110.8,288L147.7,288L147.7,128L184.6,128L184.6,0L221.5,0L221.5,64L258.5,64L258.5,32L295.4,32L295.4,224L332.3,224L332.3,256L369.2,256L369.2,256L406.2,256L406.2,96L443.1,96L443.1,160L480,160L480,192L516.9,192L516.9,224L553.8,224L553.8,320L590.8,320L590.8,256L627.7,256L627.7,224L664.6,224L664.6,256L701.5,256L701.5,256L738.5,256L738.5,64L775.4,64L775.4,96L812.3,96L812.3,192L849.2,192L849.2,288L886.2,288L886.2,64L923.1,64L923.1,96L960,96L960,192L996.9,192L996.9,64L1033.8,64L1033.8,192L1070.8,192L1070.8,128L1107.7,128L1107.7,128L1144.6,128L1144.6,160L1181.5,160L1181.5,160L1218.5,160L1218.5,96L1255.4,96L1255.4,288L1292.3,288L1292.3,64L1329.2,64L1329.2,288L1366.2,288L1366.2,96L1403.1,96L1403.1,64L1440,64L1440,320L1403.1,320L1403.1,320L1366.2,320L1366.2,320L1329.2,320L1329.2,320L1292.3,320L1292.3,320L1255.4,320L1255.4,320L1218.5,320L1218.5,320L1181.5,320L1181.5,320L1144.6,320L1144.6,320L1107.7,320L1107.7,320L1070.8,320L1070.8,320L1033.8,320L1033.8,320L996.9,320L996.9,320L960,320L960,320L923.1,320L923.1,320L886.2,320L886.2,320L849.2,320L849.2,320L812.3,320L812.3,320L775.4,320L775.4,320L738.5,320L738.5,320L701.5,320L701.5,320L664.6,320L664.6,320L627.7,320L627.7,320L590.8,320L590.8,320L553.8,320L553.8,320L516.9,320L516.9,320L480,320L480,320L443.1,320L443.1,320L406.2,320L406.2,320L369.2,320L369.2,320L332.3,320L332.3,320L295.4,320L295.4,320L258.5,320L258.5,320L221.5,320L221.5,320L184.6,320L184.6,320L147.7,320L147.7,320L110.8,320L110.8,320L73.8,320L73.8,320L36.9,320L36.9,320L0,320L0,320Z"></path>
@@ -351,7 +376,7 @@ function App() {
 </div>
 </div>
 
-        <div  className="rowD">
+        <div ref={projectsRef} className="rowD">
           <div className='break1' >
             <div className='row10'>
               <h1>My projects</h1>
@@ -455,7 +480,7 @@ function App() {
 </svg>
 </div>
 </div>
-        <div  className="rowD">
+        <div   ref={educationRef} className="rowD">
         <div className='break1' >
         <div className='row10'>
               <h1>My education</h1>
@@ -504,7 +529,7 @@ function App() {
           </div>
           </div>
 
-        <div style={{width: '100%'}} className="row">
+        <div ref={contactRef} style={{width: '100%'}} className="row">
         <div className='breakC' >
                <div className='row5'>
                <div className='contact' >

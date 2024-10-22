@@ -183,7 +183,7 @@ function App() {
                    </p>
               </div>
               <div style={{marginTop:'4%'}} className='row-l'>
-                <img className='phone' src="/phone.png"></img>
+                <img className='phone' src="/phone.png" alt=""></img>
                 <h4 style={{marginLeft:'5px'}}>+371 20216328</h4>
               </div>
            </div>
@@ -191,7 +191,7 @@ function App() {
               <div className='circle'>
               <div className='row'>
                 
-              <img className='selfie' src="/selfie.webp"></img>
+              <img className='selfie' src="/selfie.webp" alt=""></img>
               </div>
               </div>
 
@@ -431,7 +431,7 @@ function App() {
 
   <div class="project-card">
   <div class="card-content">
-    <img src="/front.png" alt="memory"></img>
+    <img src="/front.png" alt="memory" ></img>
     <div class="project-info">
     <h2>Website (Front end)</h2>
     <p>This is my front end project where i made poster into website. </p>
@@ -445,7 +445,7 @@ function App() {
 
 <div class="project-card">
   <div class="card-content">
-    <img src="/ticket.png" alt="memory"></img>
+    <img src="/ticket.png" alt="memory"  ></img>
     <div class="project-info">
     <h2>Website (Tickets)</h2>
         <p>In this project i made website where you can buy tickets for events. And create events with admin priorities.</p>
@@ -488,7 +488,7 @@ function App() {
                <div className='row5'>
                 <div className='education'>
                 <div className='row'>
-                <img className='book' src="/skola.jpg"></img>
+                <img className='book' src="/skola.jpg" alt=""></img>
                 <div className='ed-text'>
                 <div className='row2'>
                   <h2 className='educationT' > Elementary Education </h2>
@@ -505,7 +505,7 @@ function App() {
                <div className='row5'>
                 <div className='education'>
                 <div className='row'>
-                <img className='book1' src="/vtdt.png"></img>
+                <img className='book1' src="/vtdt.png" alt=""></img>
                 <div className='ed-text'>
                 <div className='row2'>
                   <h2 className='educationT' > Vocational Education </h2>
@@ -547,14 +547,14 @@ function App() {
                <div className='row-l2'>
                 <h3>Instagram: </h3>
                 <a href="https://www.instagram.com/g1ncaa/" target="_blank" rel="noopener noreferrer">
-                <img className='icon' src="/Instagram.png"></img>
+                <img className='icon' src="/Instagram.png" alt=""></img>
                 </a>
                </div>
                <div className='row-l2'>
                 <h3>Gmail: ipa21.t.ginters@vtdt.edu.lv </h3>
                </div>
                <div className='row-l2'>
-                <h3>Phone:  <img className='icon' src="/phone.png"></img> +371 20216328 </h3>
+                <h3>Phone:  <img className='icon' src="/phone.png" alt=""></img> +371 20216328 </h3>
                 
                </div>
                </div>
